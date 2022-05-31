@@ -1,12 +1,11 @@
 import React from 'react'
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
         <section>
             <div>
-                <img src="" alt="producto" />
-                <p>Descripción</p>
+                <p>Catálogo</p>
             </div>
         </section>
     </main>
