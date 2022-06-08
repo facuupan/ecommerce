@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+footer {
+  background-color: #fafafa;
+}
+
+a {
+  color: #000;
+}
