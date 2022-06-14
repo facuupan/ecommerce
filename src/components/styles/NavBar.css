@@ -1,0 +1,35 @@
+a {
+    color: #fff;
+}
+
+#link-ig:hover {
+    
+    text-decoration: none;
+    background:radial-gradient(circle at 30% 107%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/* #link-fb:hover {
+    text-decoration: none;
+    background:radial-gradient(circle at 30% 107%, #3b5998 80%, #062f6e 90%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+} */
+
+
+#link-fb:hover{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }

@@ -1,5 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import "./styles/NavBar.css";
 
 const NavBar = (props) => {
   if (props.inHeader === true) {
@@ -24,21 +25,24 @@ const NavBar = (props) => {
     );
   } else {
     return (
-      <footer className="d-flex justify-content-center gap-4 navbar navbar-expand-lg bg-light">
+      <footer className="d-flex justify-content-end gap-4 navbar-expand-lg bg-secondary fixed-bottom p-2">
         <a
-          className="text-decoration-none text-reset"
+          className="text-decoration-none "
+          id="link-ig"
           href="https://www.instagram.com/"
         >
           Instagram
         </a>
         <a
-          className="text-decoration-none text-reset"
+          className="text-decoration-none "
+          id="link-lkdn"
           href="https://www.linkedin.com/"
         >
           LinkedIn
         </a>
         <a
-          className="text-decoration-none text-reset"
+          className="text-decoration-none"
+          id="link-fb"
           href="https://www.facebook.com/"
         >
           Facebook
