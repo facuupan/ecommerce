@@ -1,16 +1,15 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = ({ recetas }) => {
-  return recetas.map((r) => (
-    <Item 
-      id={r.id}
-      titulo={r.titulo} 
-      descripcion={r.descripcion} 
-      key={r.id}
-      stock={r.stock}
-      />
-  ));
-};
+const ItemList = ({ products }) => {
+  return ( 
+    products.map(p =>
+      <Item
+        key={p.id} {...p}            
+        />
+        )
+    
+  )
+}
 
 export default ItemList;

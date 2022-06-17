@@ -1,17 +1,18 @@
 import React from "react";
-// import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import { useEffect } from "react";
-import fetchRecetas from "./recetasFetch";
-import recetas from "./recetas";
+import { useState } from "react";
+import CustomFetch from "./CustomFetch";
+import { productos } from "./products";
 
-function ItemListContainer(props) {
-  const [items, setItems] = React.useState([]);
+const ItemListContainer = (props) => {
+  const [products, setItems] = useState([]);
 
   useEffect(() => {
-    fetchRecetas(2000, recetas)
-    .then((res) => setItems(res));
-  }, [items]);
+    CustomFetch(2000, productos)
+      .then((res) => setItems(res))
+      .catch((error) => console.log(error));
+  }, [products]);
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
@@ -19,12 +20,10 @@ function ItemListContainer(props) {
         {props.greetings}
       </h1>
       <section className="container-fluid d-flex flex-row">
-        <ItemList recetas={items} className="row-cols-4"/>
+        <ItemList items={products} className="row-cols-4" />
       </section>
-        
-        {/* <ItemCount />       */}
     </div>
   );
-}
+};
 
 export default ItemListContainer;
