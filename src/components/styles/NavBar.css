@@ -1,4 +1,4 @@
-a {
+/* a {
     color: #fff;
 }
 
@@ -21,7 +21,7 @@ a {
 } */
 
 
-#link-fb:hover{
+/* #link-fb:hover{
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -32,4 +32,4 @@ a {
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-  }
+  } */

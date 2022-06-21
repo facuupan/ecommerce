@@ -1,0 +1,36 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 3em;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  height: 25rem;
+  margin: 0.5rem 0;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 10rem;
+  object-fit: scale-down;
+}
+
+footer {
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.detail-container{
+    margin:2em;
+    max-width:100vw;
+    
+}

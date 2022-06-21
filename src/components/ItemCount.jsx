@@ -21,8 +21,8 @@ const ItemCount = ({ stock }) => {
   };
 
   return (
-    <div className="d-flex flex-column m-2">
-      <div className="d-flex justify-content-evenly m-2">
+    <div className="d-flex align-items-center flex-column m-2">
+      <div className="d-flex  m-2">
         <button
           type="button"
           className="btn btn-outline-secondary"
@@ -31,11 +31,11 @@ const ItemCount = ({ stock }) => {
           Vaciar
         </button>
       </div>
-      <div className="d-flex gap-2 justify-content-center">
+      <div className="d-flex gap-2 ">
         <button className="btn btn-danger" onClick={disminuirContador}>
           -
         </button>
-        <p className="text-center m-0 fw-semibold">Cantidad: {contador}</p>
+        <p className="text-center m-0 fw-semibold">Unidades: {contador}</p>
         <button className="btn btn-primary" onClick={aumentarContador}>
           +
         </button>

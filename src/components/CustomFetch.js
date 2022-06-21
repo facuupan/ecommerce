@@ -1,8 +1,11 @@
-const CustomFetch = (time, task) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(task);
-        }, time);
-    })};
 
-export default CustomFetch;
+
+export const CustomFetch = (time, task) => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res(task);
+    }, time);
+  });
+};
+
+
