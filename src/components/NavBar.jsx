@@ -33,7 +33,7 @@ const NavBar = (props) => {
               </Link>
             </li>
             
-          </ul><Link to="carrito">
+          </ul><Link to="/carrito">
                 <CartWidget />
               </Link>
         </div>

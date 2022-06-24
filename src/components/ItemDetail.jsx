@@ -1,9 +1,10 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ( {detalle} ) => {
-  return (
-    
+const ItemDetail = ( {detalle, onAdd} ) => {
+  
+
+  return (    
       <div className=" detail-container row g-3">
         <div className="col-md-4">
           <img

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock }) => {
   const [contador, setContador] = useState(0);
@@ -16,7 +17,6 @@ const ItemCount = ({ stock }) => {
   };
   const resetCount = () => setContador(0);
   const ConfirmCompra = () => {
-    alert(`Has comprado ${contador} unidades de este producto`);
     setContador(0);
   };
 
@@ -40,9 +40,13 @@ const ItemCount = ({ stock }) => {
           +
         </button>
       </div>
-      <button className="btn btn-success my-2" onClick={ConfirmCompra}>
-        Comprar
-      </button>
+      <Link
+        to="/carrito"
+        className="btn btn-success my-2"
+        onClick={ConfirmCompra}
+      >
+        Agregar al carrito
+      </Link>
     </div>
   );
 };
