@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Carrito = () => {
   return (
-    <section className="container">
-      <h1>Carrito</h1>
-    </section>
-  );
-};
+    <div>Carrito</div>
+  )
+}
 
-export default Carrito;
+export default Carrito
