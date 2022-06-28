@@ -43,9 +43,9 @@ const ItemCount = ({ stock, onAdd }) => {
           +
         </button>
       </div>
-      <Link to="/carrito" className="btn btn-success my-2" onClick={ConfirmCompra}>
+      <button className="btn btn-primary" onClick={ConfirmCompra}>
         Agregar al carrito
-      </Link>
+      </button>
     </div>
   );
 };
