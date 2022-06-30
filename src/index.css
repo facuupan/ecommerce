@@ -12,6 +12,15 @@ a {
   height: 25rem;
   margin: 0.5rem 0;
 }
+.card-title {
+  height: 4.5rem;
+  overflow:hidden;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
 
 .item:hover {
   transform: scale(1.05);

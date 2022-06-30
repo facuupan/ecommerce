@@ -11,7 +11,7 @@ const ItemListContainer = () => {
   const categoria = useParams();
 
   useEffect(() => {
-    console.log(categoria);
+    console.log(categoria)
     if (!categoria.id) {
       CustomFetch(2000, productos)
         .then((res) => setItems(res))
@@ -28,8 +28,11 @@ const ItemListContainer = () => {
   return (
     <div className="container-md mt-5">
       <section className="row row-cols-3 g-3">
-        {items.length > 0 ? <ItemList productos={items} /> : <div>Cargando...</div>}
-        
+        {items.length > 0 ? (
+          <ItemList productos={items} />
+        ) : (
+          <div>Cargando...</div>
+        )}
       </section>
     </div>
   );

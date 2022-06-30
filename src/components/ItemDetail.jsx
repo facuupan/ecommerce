@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { contexto } from "../CartContext";
 
 const ItemDetail = ({ detalle }) => {
-  const [cantidadCarrito, setCantidad] = useState(0);
+  const [cantidad, setCantidad] = useState(0);
 
   const onAdd = (cantidad) => {
     if (cantidad > 0) {
@@ -13,7 +13,8 @@ const ItemDetail = ({ detalle }) => {
     }
   };
 
-  console.log(cantidadCarrito);
+  const context = useContext(contexto);
+  console.log(context);
 
   return (
     <div className=" detail-container row g-3">
@@ -28,7 +29,7 @@ const ItemDetail = ({ detalle }) => {
         <div className="card-body">
           <h5 className="card-title">{detalle.titulo}</h5>
           <h2>{detalle.precio * 200}AR$</h2>
-          {cantidadCarrito ? (
+          {cantidad ? (
             <Link to="/carrito" className="btn btn-success">
               Finalizar compra
             </Link>

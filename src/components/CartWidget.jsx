@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { contexto } from "../CartContext";
 
 const CartWidget = () => {
+  const resultado = useContext(contexto);
+
   return (
-    <svg
-      className="d-flex bi bi-bag container-fluid text-bg-dark"
-      xmlns="http://www.w3.org/2000/svg"
-      width="2rem"
-      height="2rem"
-      fill="currentColor"
-      viewBox="0 0 16 16"
-    >
-      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-   
-    </svg>
+    <div className="d-flex text-bg-dark">
+      <svg
+        className="d-flex bi bi-bag container-fluid p-0 mh-100"
+        xmlns="http://www.w3.org/2000/svg"
+        width="2.5rem"
+        height="2.5rem"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+      </svg>
+      {resultado.cantidad_total}
+    </div>
   );
 };
 

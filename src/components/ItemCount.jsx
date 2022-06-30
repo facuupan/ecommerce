@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, onAdd }) => {
   const [contador, setContador] = useState(0);
@@ -16,6 +16,7 @@ const ItemCount = ({ stock, onAdd }) => {
     }
   };
   const resetCount = () => setContador(0);
+  
   const ConfirmCompra = () => {
     if (contador !== 0) {
       onAdd(contador);
